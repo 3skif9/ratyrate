@@ -3,7 +3,8 @@ module Helpers
 
     cached_average = rateable_obj.average dimension
     avg = cached_average ? cached_average.avg : 0
-    votes = cached_average.qty
+
+    votes = cached_average ? cached_average.qty : 0
 
     star         = options[:star]         || 5
     enable_half  = options[:enable_half]  || false 
@@ -153,4 +154,5 @@ end
 class ActionView::Base
   include Helpers
 end
+
 
