@@ -69,7 +69,7 @@ module Helpers
 
         content_tag :p, (tag :meta, :name => "ratingValue", :content => avg , :itemprop => "ratingValue") +
                           (tag :meta, :name => "bestRating", :content => '5', :itemprop =>"bestRating") +
-                          (content_tag :span, votes.to_s, itemprop: 'ratingCount') +
+                          (content_tag :span, votes.to_s, itemprop: 'ratingCount', id: 'votes') +
                           " votes", :style=>"float: right; margin-top: 8px;font-size:11px; color: #b5bbc2"
       end
 
